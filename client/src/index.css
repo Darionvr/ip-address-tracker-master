@@ -1,0 +1,8 @@
+body {
+  background-image: url(../public/images/pattern-bg-mobile.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  font-family: "Rubik", sans-serif;
+  padding: 1rem;
+
+}
