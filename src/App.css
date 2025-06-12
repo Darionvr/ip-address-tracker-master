@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .background {
@@ -12,6 +13,7 @@
   background-repeat: no-repeat;
   background-position: top center;
   position: relative;
+  margin: 0;
 }
 
 main {
@@ -21,9 +23,12 @@ main {
   gap: 1rem;
   text-align: center;
   z-index: 1000;
+  width: 90%;  
+
+
 }
 
-section {
+.container {
   background-color: white;
   border-radius: 10px;
   padding: .5rem;
@@ -35,7 +40,7 @@ h1 {
   font-weight: 500;
 }
 
-.container {
+form {
   position: relative;
   height: 3rem;
   width: 100%;
@@ -75,31 +80,44 @@ h2 {
 }
 
 .map {
-  height: 400px;
-  width: 100%;
+  position: absolute;
+  margin: 0;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+
 }
 
-@media (min-width: 375px) {
+@media (width > 800px) {
   .background {
     background-image: url(../public/images/pattern-bg-desktop.png);
   }
-  .container{
+
+  form {
     justify-content: center;
 
   }
-   input{
+
+  input {
     width: 50%;
-   }
-  section {
-    display: flex;
+  }
+
+  main {
+    margin-inline: 5rem;
+    width: unset;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 250px));
 
   }
 
   article {
     padding: 1rem;
     text-align: left;
-    min-width: 10rem;
-    max-width: 14rem;
     position: relative;
 
   }

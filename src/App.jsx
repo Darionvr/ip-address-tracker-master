@@ -40,7 +40,7 @@ getIpify(inputValue)
     <div className="background"></div>
     <main> 
       <h1> IP Address Tracker</h1>
-      <form className="container" onSubmit={handleSubmit}>
+      <form  onSubmit={handleSubmit}>
         <input type="text" 
         value={inputValue}
         onChange={e => setInputValue(e.target.value)}
@@ -49,7 +49,7 @@ getIpify(inputValue)
         <button type='submit'> &gt; </button>
       </form>
       
-      <section>
+      <section className='container'>
         <article>
           <h2>ip address</h2>
           <span className='data'> {ipData.ip}</span>
@@ -76,7 +76,8 @@ getIpify(inputValue)
 </main>
       <APIProvider apiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
         <div className='map'>
-          <Map zoom={15} center={position} mapId={import.meta.env.VITE_GOOGLE_MAPS_ID}>
+          <Map zoom={15} center={position} mapId={import.meta.env.VITE_GOOGLE_MAPS_ID}
+          options={{disableDefaultUI: true}}>
             <AdvancedMarker position={position} >
             </AdvancedMarker>
           </Map>
